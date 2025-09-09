@@ -1,0 +1,20 @@
+const express = require('express');
+const router = express.Router();
+const Complaint = require('../models/Complaint');
+
+router.post('/complaints', async (req, res) => {
+  try {
+    const { title, description, createdBy } = req.body;
+
+    // Validate that createdBy is provided
+    if (!createdBy) {
+      return res.status(400).json({ error: 'createdBy field is required.' });
+    }
+
+    const complaint = new Complaint({ title, description, createdBy });
+    await complaint.save();
+    res.status(201).json(complaint);
+  } catch (error) {
+    console.error('Error submitting complaint:', error);
+    res.status(500).json({ error: error.message });
+  }

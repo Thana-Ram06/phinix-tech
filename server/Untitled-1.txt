@@ -1,0 +1,5 @@
+{
+  "title": "Sample Complaint",
+  "description": "This is a test complaint.",
+  "createdBy": "64f1a2b3c4d5e6f7890g1234" // Replace with a valid user ID
+}

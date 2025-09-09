@@ -1,0 +1,10 @@
+node_modules/
+client/build/
+client/dist/
+server/uploads/
+.env
+.env.*
+*.log
+.vscode/
+.idea/
+coverage/
