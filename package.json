@@ -7,11 +7,10 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd server && npm run dev",
     "client": "cd client && npm start",
-    "build": "npm run install-all && cd client && npm run build",
+    "build": "cd client && npm run build",
     "install-all": "npm install && cd server && npm install && cd ../client && npm install",
     "start": "npm run dev",
-    "test-setup": "node test-setup.js",
-    "postinstall": "npm run install-all"
+    "test-setup": "node test-setup.js"
   },
   "keywords": ["civic", "accountability", "local-government", "citizen-engagement"],
   "author": "CivicPulse Team",
